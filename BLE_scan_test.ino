@@ -2,10 +2,7 @@
    Based on Neil Kolban example for IDF: https://github.com/nkolban/esp32-snippets/blob/master/cpp_utils/tests/BLE%20Tests/SampleScan.cpp
    Ported to Arduino ESP32 by Evandro Copercini
 */
-#include <iostream>
-#include <stddef.h>
-#include "sdkconfig.h"
-#include <sstream>
+
 #include <BLEDevice.h>
 #include <BLEUtils.h>
 #include <BLEScan.h>
@@ -113,4 +110,4 @@ void loop() {
       delay(100);
     }
     Serial.print("\n");
-  }
+}
