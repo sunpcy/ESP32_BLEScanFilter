@@ -8,24 +8,29 @@
 #include <BLEScan.h>
 #include <BLEAdvertisedDevice.h>
 
+//UUIDs of what server we want to filtering.
 static BLEUUID serviceUUID_A("7cddf5af-453f-40fa-808e-37ae6ad8facd");
 static BLEUUID serviceUUID_B("69e2c127-7db7-469c-8852-b0a542e15623");
 static BLEUUID serviceUUID_C("407fc20d-d5f5-4176-bb4d-cc9c1968f9f6");
 static BLEUUID serviceUUID_D("14fb4533-1997-4bbe-a567-554d2da89738");
 
+//Set "Scan_x" for condition statement.
 static BLEAdvertisedDevice* Scan_A ;
 static BLEAdvertisedDevice* Scan_B ;
 static BLEAdvertisedDevice* Scan_C ;
 static BLEAdvertisedDevice* Scan_D ;
 
+//Set "Found_x" for condition statement.
 static bool Found_A = false;
 static bool Found_B = false;
 static bool Found_C = false;
 static bool Found_D = false;
 
 
+//Set scanTime to forever "scanTime = 0".
 int scanTime = 0; //In seconds
 
+//Function when found device and can use in void loop(); for do other things.
 class MyAdvertisedDeviceCallbacks: public BLEAdvertisedDeviceCallbacks {
     void onResult(BLEAdvertisedDevice advertisedDevice) {
       if (advertisedDevice.isAdvertisingService(serviceUUID_A)){
