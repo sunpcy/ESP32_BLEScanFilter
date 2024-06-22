@@ -1,2 +1,2 @@
 # ESP32_BLEScanFilter
-This is applied BLE_Scan for filter or whitelist server with UUIDs to find RSSI or things.
+This project involves conducting experiments to estimate position coordinates using Bluetooth Low Energy (BLE) signal strengths (RSSI)
