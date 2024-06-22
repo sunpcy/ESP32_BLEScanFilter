@@ -14,3 +14,4 @@ This repository contains code for a **BLE (Bluetooth Low Energy)** communication
 
 - **RSSI (Received Signal Strength Indication):** Utilizes RSSI for proximity estimation between BLE devices.
 - **Moving Average:** Implements moving average techniques to smooth RSSI readings, improving accuracy in distance estimation.
+- **Least Squares Method (LSM):** Applied for position estimation based on RSSI values, facilitating accurate location tracking in BLE environments.
